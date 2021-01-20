@@ -9,11 +9,13 @@
 </head>
 <body>
 <h1>Welcome on Bookstore</h1>
+<a href="/create-book">Add a video</a>
 <ul>
     <?php foreach ($books as $book): ?>
         <li>
             title: <?php echo $book['title']; ?><br>
-            price: <?php echo $book['price'] ?> €
+            price: <?php echo $book['price'] ?> €<br>
+            <?php echo '<a href="/book/'. $book["id"] .'">Voir</a>'; ?>
         </li>
     <?php endforeach; ?>
 </ul>
